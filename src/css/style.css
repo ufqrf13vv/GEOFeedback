@@ -1,0 +1,182 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    font-family: 'FiraSansRegular', sans-serif;
+    font-size: 15px;
+    margin: 0;
+    background: #999999;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+@font-face {
+    font-family: 'FiraSansMedium';
+    src: local('Fira Sans Medium'),
+    local('FiraSans-Medium'),
+    url('../fonts/Firasansmedium.woff2') format('woff2'),
+    url('../fonts/Firasansmedium.woff') format('woff'),
+    url('../fonts/Firasansmedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSansLight';
+    src: local('Fira Sans Light'),
+    local('FiraSans-Light'),
+    url('../fonts/Firasanslight.woff2') format('woff2'),
+    url('../fonts/Firasanslight.woff') format('woff'),
+    url('../fonts/Firasanslight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FiraSansRegular';
+    src: local('Fira Sans Regular'),
+    local('FiraSans-Regular'),
+    url('../fonts/Firasansregular.woff2') format('woff2'),
+    url('../fonts/Firasansregular.woff') format('woff'),
+    url('../fonts/Firasansregular.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+.btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn--close {
+    width: 15px;
+    height: 15px;
+    margin-left: auto;
+}
+
+.btn--close > svg {
+    width: 15px;
+    height: 15px;
+    fill: #fff;
+}
+
+.btn--submit {
+    align-self: flex-end;
+    font-family: 'FiraSansLight';
+    font-size: 12px;
+    padding: 8px 17px;
+    background: #ff8663;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.feedback {
+    width: 380px;
+    display: none;
+}
+
+.feedback__header {
+    display: flex;
+    font-family: 'FiraSansLight';
+    padding: 15px;
+    background: #ff8663;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.feedback__ico {
+    width: 8px;
+    height: 13px;
+    fill: #fff;
+    margin-right: 8px;
+}
+
+.feedback__wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.feedback__list {
+    display: flex;
+    flex-direction: column;
+    height: 135px;
+    overflow-y: scroll;
+    padding-left: 0;
+    list-style: none;
+    color: #4f4f4f;
+    border-bottom: 1px solid #f0f0f0;
+    margin: 0;
+}
+
+.feedback__item:not(:last-of-type) {
+    margin-bottom: 28px;
+}
+
+.feedback__item-header {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.feedback__item-name {
+    font-family: 'FiraSansMedium';
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.feedback__item__place {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #959595;
+}
+
+.feedback__item-date {
+    font-size: 14px;
+    color: #959595;
+}
+
+.feedback__title {
+    font-family: 'FiraSansMedium';
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ff8663;
+}
+
+.feedback__input,
+.feedback__text {
+    font-family: 'FiraSansLight';
+    width: 100%;
+    border: 1px solid #c4c4c4;
+    border-radius: 25px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    color: #c5c5c5;
+}
+
+.feedback__text {
+    height: 130px;
+    resize: none;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
