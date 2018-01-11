@@ -87,6 +87,7 @@ textarea:focus {
 .feedback {
     width: 380px;
     display: none;
+    position: absolute;
 }
 
 .feedback__header {
@@ -142,7 +143,7 @@ textarea:focus {
     margin-right: 10px;
 }
 
-.feedback__item__place {
+.feedback__item-place {
     font-size: 16px;
     margin-right: 5px;
     color: #959595;
@@ -174,6 +175,10 @@ textarea:focus {
 .feedback__text {
     height: 130px;
     resize: none;
+}
+
+.feedback__empty {
+    color: #000;
 }
 
 .map {

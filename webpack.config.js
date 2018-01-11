@@ -1,5 +1,6 @@
 const path = require('path');
 const extractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
 const PATHS = {
     source: path.join(__dirname, 'src'),
     build: path.join(__dirname, 'public')
@@ -26,16 +27,31 @@ module.exports = {
         }, {
             test: /\.(png|jpg|svg)$/,
             loader: 'file-loader?name=img/[name].[ext]'
-        }, {
-            test: /\.(html)$/,
-            loader: 'file-loader?name=[name].[ext]'
-        }, {
+        },  {
             test: /\.(ttf|woff|woff2)$/,
             loader: 'file-loader?name=fonts/[name].[ext]'
+        }, {
+            test: /\.hbs$/,
+            loader: 'handlebars-loader'
         }
         ]
     },
     plugins: [
-        new extractTextPlugin('/css/style.css')
-    ]
+        new extractTextPlugin('./css/style.css'),
+        new HtmlPlugin({
+            filename: 'index.html',
+            title: 'Гео-отзыв',
+            template: PATHS.source + '/index.hbs'
+        })
+    ],
+    devServer: {
+        contentBase: path.join(__dirname, "/public"),
+        stats: 'errors-only',
+        port: 8080
+    },
+    resolve: {
+        alias: {
+            handlebars: 'handlebars/dist/handlebars.min.js'
+        }
+    }
 };

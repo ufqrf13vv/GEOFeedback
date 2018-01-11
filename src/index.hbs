@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{htmlWebpackPlugin.options.title}}</title>
+
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <div class="map" id="map"></div>
+    <div class="feedback" id="feedback">
+        <div class="feedback__header">
+            <svg class="feedback__ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></svg>
+            <div class="feedback__header-address"></div>
+            <button class="btn btn--close" id="closeWindow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M323.1 441l53.9-53.9c9.4-9.4 9.4-24.5 0-33.9L279.8 256l97.2-97.2c9.4-9.4 9.4-24.5 0-33.9L323.1 71c-9.4-9.4-24.5-9.4-33.9 0L192 168.2 94.8 71c-9.4-9.4-24.5-9.4-33.9 0L7 124.9c-9.4 9.4-9.4 24.5 0 33.9l97.2 97.2L7 353.2c-9.4 9.4-9.4 24.5 0 33.9L60.9 441c9.4 9.4 24.5 9.4 33.9 0l97.2-97.2 97.2 97.2c9.3 9.3 24.5 9.3 33.9 0z"/></svg></button>
+        </div>
+        <div class="feedback__wrapper">
+            <div class="feedback__empty">Отзывов пока нет...</div>
+            <ul class="feedback__list" id="list"></ul>
+            <h2 class="feedback__title">Ваш отзыв</h2>
+            <input class="feedback__input" id="name" type="text" name="name" placeholder="Ваше имя" autofocus>
+            <input class="feedback__input" id="place" type="text" name="place" placeholder="Укажите место">
+            <textarea class="feedback__text" name="text" id="text" placeholder="Поделитесь впечатлениями"></textarea>
+            <button class="btn btn--submit" id="add">Добавить</button>
+        </div>
+    </div>
+    <!--<script src="main.js"></script>-->
+</body>
+</html>

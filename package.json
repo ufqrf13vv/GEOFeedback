@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
-  "author": "",
+  "author": "mragulin",
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
@@ -12,7 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "handlebars": "^4.0.11",
-    "normalize.css": "^7.0.0"
+    "handlebars-loader": "^1.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -23,6 +23,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
     "resolve-url": "^0.2.1",
     "resolve-url-loader": "^2.2.1",
     "style-loader": "^0.19.1",
