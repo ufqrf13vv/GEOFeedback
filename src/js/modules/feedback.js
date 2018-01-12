@@ -2,11 +2,12 @@ export function openWindow(data, window) {
     let address = window.querySelector('.feedback__header-address');
 
     window.style.display = 'block';
-    window.style.left = data.clientCoords.left;
-    window.style.top = data.clientCoords.top;
+    window.style.left = data.clientCoords[0];
+    window.style.top = data.clientCoords[1];
     address.innerHTML = data.address;
-
-    //console.log(address);
+    address.dataset.id = data.id;
+    address.dataset.coords = data.coords;
+    address.dataset.address = data.address;
 }
 
 export function clearWindow(window) {
