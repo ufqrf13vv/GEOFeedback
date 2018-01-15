@@ -10,7 +10,7 @@ module.exports = {
     entry: PATHS.source + '/js/main.js',
     output: {
         path: PATHS.build,
-        publicPath:"../",
+        publicPath: "../",
         filename: '[name].js'
     },
     module: {
@@ -45,8 +45,9 @@ module.exports = {
         })
     ],
     devServer: {
-        contentBase: path.join(__dirname, "/public"),
+        publicPath: 'http://localhost:8080/',
         stats: 'errors-only',
+        open: true,
         port: 8080
     },
     resolve: {
